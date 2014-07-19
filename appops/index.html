@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html itemscope="" itemtype="http://schema.org/Organization"
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style element="polymer-flex-layout-controller">.flexbox,[flexbox],[h-flexbox],[v-flexbox]{display:-webkit-box!important;display:-ms-flexbox!important;display:-moz-flex!important;display:-webkit-flex!important;display:flex!important}.flexbox.row,[flexbox],[h-flexbox]{-webkit-box-orient:horizontal;-ms-flex-direction:row;-moz-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flexbox.column,[v-flexbox]{-webkit-box-orient:vertical;-ms-flex-direction:column;-moz-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex,[flex],[fit]{-webkit-box-flex:1;-ms-flex:1;-moz-flex:1;-webkit-flex:1;flex:1}::content>.flex,::content>[flex],::content>[fit]{-webkit-box-flex:1;-ms-flex:1;-moz-flex:1;-webkit-flex:1;flex:1}.flexbox.align-start{-webkit-box-align:start;-ms-flex-align:start;-moz-align-items:flex-start;-webkit-align-items:flex-start;align-items:flex-start}.flexbox.align-end{-webkit-box-align:end;-ms-flex-align:end;-moz-align-items:flex-end;-webkit-align-items:flex-end;align-items:flex-end}.flexbox.align-center{-webkit-box-align:center;-ms-flex-align:center;-moz-align-items:center;-webkit-align-items:center;align-items:center}.flexbox.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start}.flexbox.justify-end{-webkit-box-pack:end;-ms-flex-pack:end;-moz-justify-content:flex-end;-webkit-justify-content:flex-end;justify-content:flex-end}.flexbox.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;-moz-justify-content:center;-webkit-justify-content:center;justify-content:center}.flexbox.justify-between{-webkit-box-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between}:host(.flexbox:host,[flexbox]:host,[h-flexbox]:host,[v-flexbox]:host){display:-webkit-box!important;display:-ms-flexbox!important;display:-moz-flex!important;display:-webkit-flex!important;display:flex!important}:host(.flexbox.row:host,[flexbox]:host,[h-flexbox]:host){-webkit-box-orient:horizontal;-ms-flex-direction:row;-moz-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}:host(.flexbox.column:host,[v-flexbox]:host){-webkit-box-orient:vertical;-ms-flex-direction:column;-moz-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}:host(.flexbox.align-start:host){-webkit-box-align:start;-ms-flex-align:start;-moz-align-items:flex-start;-webkit-align-items:flex-start;align-items:flex-start}:host(.flexbox.align-end:host){-webkit-box-align:end;-ms-flex-align:end;-moz-align-items:flex-end;-webkit-align-items:flex-end;align-items:flex-end}:host(.flexbox.align-center:host){-webkit-box-align:center;-ms-flex-align:center;-moz-align-items:center;-webkit-align-items:center;align-items:center}:host(.flexbox.justify-start:host){-webkit-box-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start}:host(.flexbox.justify-end:host){-webkit-box-pack:end;-ms-flex-pack:end;-moz-justify-content:flex-end;-webkit-justify-content:flex-end;justify-content:flex-end}:host(.flexbox.justify-center:host){-webkit-box-pack:center;-ms-flex-pack:center;-moz-justify-content:center;-webkit-justify-content:center;justify-content:center}:host(.flexbox.justify-between:host){-webkit-box-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between}
+
+</style>
+<style>template {display: none !important;} /* injected by platform.js */</style><style>
+body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; } 
+</style>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="google-site-verification" content="pnjjbQFvjPwaWhEXY6nSyaS9iyghmH-M_yLHBveDX2M"> -->
+<meta itemprop="name" content="App Ops Philippines">
+<meta itemprop="description" content="App Ops Philippinees is a media agency in Cebu City, Philippines serving customers worldwide.">
+
+
+<meta itemprop="image" content="http://www.polymer-project.org/images/instacod.png">
+
+
+<title>
+  App Ops Philippines 2014 Cebu 
+</title>
+<link rel="publisher" href="https://plus.google.com/+BartSakwerda">
+<link rel="shortcut icon" href="http://www.polymer-project.org/images/logos/p-logo-16.png">
+<link href="http://fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700" rel="stylesheet">
+<!-- <link href="http://www.polymer-project.org/css/site2.css?20140711" rel="stylesheet" shim-shadowdom=""> -->
+<link href="./res/site2.css" rel="stylesheet" shim-shadowdom="">
+
+  <link rel="stylesheet" href="./res/homepage.css" shim-shadowdom="">
+
+
+<!--   // <script async="" src="./res/analytics.js"></script> -->
+  <script src="./res/platform.js"></script>
+
+  <!-- TODO: remove when https://github.com/Polymer/polymer/issues/391 is fixed -->
+  <link rel="import" href="http://www.polymer-project.org/components/polymer/polymer.html">
+ <!--  <link rel="import" href="http://www.polymer-project.org/elements/common_elements.vulcanized.html?20140711"> -->
+  <link rel="import" href="./res/common_elements.vulcanized.html">
+
+<style>
+/*******************************
+          Flex Layout
+*******************************/
+
+html /deep/ [layout][horizontal], html /deep/ [layout][vertical] {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+html /deep/ [layout][horizontal][inline], html /deep/ [layout][vertical][inline] {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+html /deep/ [layout][horizontal] {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+html /deep/ [layout][horizontal][reverse] {
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+html /deep/ [layout][vertical] {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+html /deep/ [layout][vertical][reverse] {
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+html /deep/ [layout][wrap] {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+html /deep/ [layout][wrap-reverse] {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+html /deep/ [flex] {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+html /deep/ [flex][auto] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+html /deep/ [flex][none] {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+html /deep/ [flex][one] {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+html /deep/ [flex][two] {
+  -ms-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
+html /deep/ [flex][three] {
+  -ms-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+html /deep/ [flex][four] {
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+
+html /deep/ [flex][five] {
+  -ms-flex: 5;
+  -webkit-flex: 5;
+  flex: 5;
+}
+
+html /deep/ [flex][six] {
+  -ms-flex: 6;
+  -webkit-flex: 6;
+  flex: 6;
+}
+
+html /deep/ [flex][seven] {
+  -ms-flex: 7;
+  -webkit-flex: 7;
+  flex: 7;
+}
+
+html /deep/ [flex][eight] {
+  -ms-flex: 8;
+  -webkit-flex: 8;
+  flex: 8;
+}
+
+html /deep/ [flex][nine] {
+  -ms-flex: 9;
+  -webkit-flex: 9;
+  flex: 9;
+}
+
+html /deep/ [flex][ten] {
+  -ms-flex: 10;
+  -webkit-flex: 10;
+  flex: 10;
+}
+
+html /deep/ [flex][eleven] {
+  -ms-flex: 11;
+  -webkit-flex: 11;
+  flex: 11;
+}
+
+html /deep/ [flex][twelve] {
+  -ms-flex: 12;
+  -webkit-flex: 12;
+  flex: 12;
+}
+
+/* alignment in cross axis */
+
+html /deep/ [layout][start] {
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+html /deep/ [layout][center] {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+html /deep/ [layout][end] {
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/* alignment in main axis */
+
+html /deep/ [layout][start-justified] {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+html /deep/ [layout][center-justified] {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+html /deep/ [layout][end-justified] {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+html /deep/ [layout][around-justified] {
+  -ms-flex-pack: around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+html /deep/ [layout][justified] {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* self alignment */
+
+html /deep/ [self-start] {
+  -ms-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+html /deep/ [self-center] {
+  -ms-align-self: center;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+html /deep/ [self-end] {
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+html /deep/ [self-stretch] {
+  -ms-align-self: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+/*******************************
+          Other Layout
+*******************************/
+
+html /deep/ [block] {
+  display: block;
+}
+
+/* ie support for hidden */
+html /deep/ [hidden] {
+  display: none !important;
+}
+
+html /deep/ [relative] {
+  position: relative;
+}
+
+html /deep/ [fit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body[fullbleed] {
+  margin: 0;
+  height: 100vh;
+}
+
+/*******************************
+            Other
+*******************************/
+
+html /deep/ [segment], html /deep/ segment {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px 5px 5px 5px;
+}
+
+</style><style>html /deep/ core-icon{display:inline-block;vertical-align:middle;background-repeat:no-repeat;fill:currentcolor}html /deep/ core-icon[size=""]{position:relative}html /deep/ core-icon[size=""]>svg{position:absolute;top:0;right:0;bottom:0;left:0}</style><style>html /deep/ core-collapse{display:block}html /deep/ .core-collapse-closed{display:none}</style><style>.core-overlay-backdrop{position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#000;opacity:0;transition:opacity .2s}.core-overlay-backdrop.core-opened{opacity:.6}</style></head>
+<body id="welcome">
+
+<scroll-area class="">
+  <site-banner class="main-bg bar sticky align-center justify-start flexbox">
+    <polymer-flex-layout align="center" justify="start" style="display: none;"></polymer-flex-layout>
+    <a href="" class="logo" flexbox=""><img src="./res/img/lockup.svg"></a>
+    
+
+
+<app-bar theme="dark" class="bar fixed">
+<!--   <a href="http://www.polymer-project.org/docs/start/tutorial/intro.html" class="paper-button " borderless="" sink="">
+  Learn</a>
+  <a href="http://www.polymer-project.org/docs/elements/" class="paper-button " borderless="" sink="">
+  Elements</a>
+
+  <a href="http://www.polymer-project.org/resources/faq.html" class="paper-button " borderless="" sink="">
+  Resources</a> -->
+</app-bar> 
+
+    <polymer-ui-icon id="dropdown-toggle" size="35" src="./res/img/ic_arrowDropDown_dark_.png" style="height: 35px; width: 35px; background-image: url(http://www.polymer-project.org/images/picons/ic_arrowDropDown_dark_.png); background-size: 35px; background-position: 50% 50%;">
+    </polymer-ui-icon>
+
+
+    <dropdown-panel>
+  <polymer-ui-menu-item src="/images/picons/ic_book_dark_.png" label="Learn" href="/docs/start/tutorial/intro.html">
+  </polymer-ui-menu-item>
+
+  <polymer-ui-menu-item src="/images/picons/ic_feedback_dark_.png" label="Elements" href="/docs/elements/">
+  </polymer-ui-menu-item>
+
+  <polymer-ui-menu-item src="/images/picons/ic_feedback_dark_.png" label="Resources" href="/resources/faq.html">
+  </polymer-ui-menu-item>
+</dropdown-panel>
+
+  </site-banner>
+
+  <main><section id="future" class="main-bg">
+  <div class="panel left">
+    <img src="./res/img/p-logo.svg">
+    <summary>
+      <h1>App Ops Philippines</h1>
+      <p>New digital agency, based in Cebu City, Philippines. We work on internet products for modern devices. We use up-to-date web technologies and methodologies of design and development. We are based in dynamic Cebu City, Philippines. </p>
+     <!-- <a href="">
+         <paper-button icon="archive" label="Get Polymer" raisedbutton="" role="button" tabindex="0" aria-label="Get Polymer"></paper-button> 
+      </a>-->
+     <a href="mailto:bantayan.info@gmail.com">
+        <paper-button icon="arrow-forward" label="Send email" raisedButton unresolved></paper-button>
+      </a>
+<!--       <a href="https://github.com/polymer">
+        <paper-button class="github" iconsrc="/images/picons/ic_social_github.png" label="View on Github" role="button" tabindex="0" aria-label="View on Github"></paper-button>
+      </a> -->
+    </summary>
+  </div>
+</section>
+
+<section id="designer" class="main-purple">
+  <div class="panel">
+    <summary style="transform: translateZ(0);">
+      <h1>Current project.</h1>
+      <!-- <a href="http://www.polymer-project.org/tools/designer/" target="_blank"> -->
+        <img src="./res/img/fadeout-maps.png" alt="Launch the designer tool" title="go to our github page">
+      <!-- </a> -->
+      <div>
+        <p>
+        Currently we are working with some cool map providers to build mapping apps for Philippino customers including government and disaster non-gov-organisations. 
+        </p>
+     <!--    <a href="http://www.polymer-project.org/tools/designer/" target="_blank">
+          <paper-button icon="arrow-forward" label="Try it now" role="button" tabindex="0" aria-label="Try it now"></paper-button>
+        </a> -->
+      </div>
+    </summary>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="panel right">
+    <summary>
+        <feature-carousel interval="5000" flex="">
+        <div class="core-selected" active="">
+          <a href="" target="_blank">
+            <img src="./res/img/slides/0010.jpg">
+          </a>
+          <summary>
+            <h1>Featured: app ops presentation</h1>
+            <p>App Ops Philippines aims to work on broad range of problems, including weather and data visualization.
+            <br><br>
+            <a href="http://www.github.com/cebu-info">
+              <paper-button icon="arrow-forward" label="Learn more" role="button" tabindex="0" aria-label="Learn more"></paper-button>
+            </a>
+            </p>
+          </summary>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="./res/img/slides/0004.jpg">
+          </a>
+          <summary>
+            <h1>Featured: maps and visualization</h1>
+            <p>App Ops Philippines aims to work on broad range of problems, including weather and data visualization.
+            <br><br>
+            <a href="#">
+              <paper-button icon="arrow-forward" label="Learn more" role="button" tabindex="0" aria-label="Learn more"></paper-button>
+            </a>
+            </p>
+          </summary>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="./res/img/slides/0005.jpg">
+          </a>
+          <summary>
+            <h1>Featured: USER EXPERIENCE</h1>
+            <p>AOP would like to work with established brands and websites on optimization of Uxer Experience, front end technologies and other issues like 'speed' and 'mobile optimization'.
+            <br><br>
+            <a href="#">
+              <paper-button icon="arrow-forward" label="Learn more" role="button" tabindex="0" aria-label="Learn more"></paper-button>
+            </a>
+            </p>
+          </summary>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="./res/img/slides/0002.jpg">
+          </a>
+          <summary>
+            <h1>Why Cebu City ?</h1>
+            <p>Cebu City is second biggest in Philippines ( in terms of population ) after Manila. It is a capital city of Central Visayas and home to many IT companies and callcentres. We believe this is "right place at a right time." 
+            <br><br>
+            <a href="#">
+              <paper-button icon="arrow-forward" label="Learn more" role="button" tabindex="0" aria-label="Learn more"></paper-button>
+            </a>
+            </p>
+          </summary>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="./res/img/slides/0007.jpg">
+          </a>
+          <summary>
+            <h1>Why Cebu City ?</h1>
+            <p>Cebu City is second biggest in Philippines ( in terms of population ) after Manila. It is a capital city of Central Visayas and home to many IT companies and callcentres. We believe this is "right place at a right time." 
+            <br><br>
+            <a href="#">
+              <paper-button icon="arrow-forward" label="Learn more" role="button" tabindex="0" aria-label="Learn more"></paper-button>
+            </a>
+            </p>
+          </summary>
+        </div>
+      </feature-carousel>
+    </summary>
+  </div>
+</section>
+
+<section id="designer" class="main-purple">
+  <div class="panel">
+    <summary style="transform: translateZ(0);">
+      <h1>Team</h1>
+      <!-- <a href="http://www.polymer-project.org/tools/designer/" target="_blank"> -->
+        <img src="./res/img/designer_fadeout.png" alt="Launch the designer tool" title="go to our github page">
+      <!-- </a> -->
+      <div>
+        <p>
+        We Work with some cool map providers to build mapping apps for Philippino customers
+        </p>
+     <!--    <a href="http://www.polymer-project.org/tools/designer/" target="_blank">
+          <paper-button icon="arrow-forward" label="Try it now" role="button" tabindex="0" aria-label="Try it now"></paper-button>
+        </a> -->
+      </div>
+    </summary>
+  </div>
+</section>
+
+<!-- <section id="apps">
+  <div class="panel">
+    <h1>Demos</h1>
+    <div class="columns" layout="" horizontal="" wrap="">
+      <summary>
+        <div class="box">
+          <a href="http://www.polymer-project.org/apps/topeka/">
+            <img src="./res/img/topeka_square.png">
+          </a>
+        </div>
+        <h2 class="elements-using">Topeka</h2>
+        <p>A fun quiz app built using material-design based <em>paper-elements</em></p>
+        <a href="http://www.polymer-project.org/apps/topeka/">
+          <paper-button icon="arrow-forward" label="Demo Topeka" role="button" tabindex="0" aria-label="Demo Topeka"></paper-button>
+        </a>
+      </summary>
+      <summary>
+        <div class="box">
+          <a href="http://www.polymer-project.org/components/paper-elements/demo.html#core-toolbar">
+            <img src="./res/img/sampler-paper-square.png">
+          </a>
+        </div>
+        <h2 class="elements-creating">Paper Elements</h2>
+        <p>A sampler showcasing Polymer elements based on material design</p>
+        <a href="http://www.polymer-project.org/components/paper-elements/demo.html#core-toolbar">
+          <paper-button icon="arrow-forward" label="Browse Elements" role="button" tabindex="0" aria-label="Browse Elements"></paper-button>
+        </a>
+      </summary>
+      <summary>
+        <div class="box">
+          <a href="">
+            <img src="./res/img/okay2hk.png">
+          </a>
+        </div>
+        <h2 class="platform">Okay2HK</h2>
+        <p>Map app helping traders find buyers for the particualr merchendise.</p>
+        <a href="http://www.polymer-project.org/components/paper-calculator/demo.html">
+          <paper-button icon="arrow-forward" label="Okay2HK" role="button" tabindex="0" aria-label="Okay2HK"></paper-button>
+        </a>
+      </summary>
+    </div>
+  </div>
+</section> -->
+</main>
+
+  <footer>
+  <div>
+    <!-- <polymer-flex-layout align="center"></polymer-flex-layout> -->
+    <polymer-ui-toolbar class="align-center polymer-ui-light-theme flexbox">
+      <a href="">
+        <paper-button icon="archive" label="Download PDF" raisedbutton="" role="button" tabindex="0" aria-label="Download PDF"></paper-button>
+      </a> 
+      <a href="http://plus.google.com/ayawkabalaka/">
+        <paper-button icon="social:post-gplus" label="+ayawkabalaka" role="button" tabindex="0" aria-label="+App Ops Philippines"></paper-button>
+      </a>
+      <a href="https://twitter.com/intent/follow?screen_name=ayawkabalaka" data-twitter-follow="" title="Follow @polymer on Twitter">
+        <paper-button icon="social:post-twitter" label="@ayawkabalaka" role="button" tabindex="0" aria-label="@ayawkabalaka"></paper-button>
+      </a>
+      <a href="https://github.com/appopsph">
+        <paper-button class="github" iconsrc="./res/img/ic_social_github.png" label="/App Ops Philippines" role="button" tabindex="0" aria-label="/App Ops Philippines"></paper-button>
+      </a>
+
+    </polymer-ui-toolbar>
+
+    <p id="copyright">© 2014 App Ops Philippines. 
+    <a href="https://twitter.com/ayawkabalaka" target="_blank">@ayawkabalaka</a>     
+    </p>
+  </div>
+</footer>
+
+
+
+  
+<script>var POLYMER_VERSION = '0.3.4';</script>
+<!-- <script src="https://apis.google.com/js/plusone.js"></script> -->
+<script src="./res/prettify.js"></script>
+<!-- <script src="/js/bower_components/smoothscroll/smoothscroll.js"></script> -->
+<script src="./res/app.js"></script>
+
+
+</scroll-area>
+
+
+
+<iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe>
+<div id="GOOGLE_INPUT_CHEXT_FLAG" style="display: none;" input="null" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}"></div>
+
+</body></html>
